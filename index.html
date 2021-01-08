@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <title>AQUILA AVEIONE</title>
+</head>
+<body>
+    <div id="app">
+        <!-- {{info}} -->
+        <div class="app d-flex justify-content-center align-items-center">
+            <div>
+                <h2 class="text-center title-text"><span class="firstName">{{firstName}}</span> <span class="lastname">{{lastName}}</span></h2>
+                
+                <div class="text-center">
+                    <img src="img/aveon.png" alt="beauty" class="w-100 beauty">
+                </div>
+                
+                <nav >
+                    <ul class="d-flex">
+                        <li v-for="link in links">
+                            <span v-if="link.src">
+                                <img :src="link.src" alt="beautiful-girl" class="w-100 nav-img">
+                            </span>
+                            <span v-else>
+                            <a href="#">{{link.name}}</a>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+        </div>
+        <div class="social-navs">
+            <ul class="d-flex flex-column">
+                <li><a :href="instagram"><i class="fa fa-instagram"></i></a></li>
+                <li><a :href="twitter"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a :href="snapchat"><i class="fab fa-snapchat-square"></i></a></li>
+                <li><a :href="email"><i class="fa fa-envelope-square"></i></a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
